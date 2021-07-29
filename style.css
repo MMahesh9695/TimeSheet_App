@@ -1,0 +1,120 @@
+:root{
+    --app_color : rgb(88, 54, 240);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    /* background-image: url(); */
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+
+label{
+    display: block;
+    font-size: 12px;
+}
+
+input , select{
+    padding: 5px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1.5px solid #ddd;
+    background-color: rgb(233, 230, 230);
+    transition: border 200ms ease-out;
+}
+
+input:focus , select:focus{
+    outline: none;
+    border: 1.5px solid var(--app_color);
+}
+
+.input-items{
+    margin-bottom: 10px;
+}
+
+button{
+    outline: none;
+}
+
+#tbl_timeSheet{
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+
+#tbl_timeSheet th, #tbl_timeSheet td{
+    border : 1px solid #ddd;
+    padding : 8px;
+}
+
+#tbl_timeSheet tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+
+#tbl_timeSheet tr:hover{
+    background-color: #ddd;
+}
+
+th{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--app_color);
+    color: white;
+    text-align: left;
+    width: 300px;
+}
+
+.btn_addClass{
+    position: absolute;
+    background-color: var(--app_color);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top:80%;
+    right: 10px;
+    box-shadow: 0px 0px 8px rgb(44, 42, 42);
+}
+
+.btn_addClass::after{
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+}
+
+.timesheet_model_container{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    z-index: 1;
+    position: fixed;
+    top:0;
+    left:0;
+    /* opacity: 0.5; */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.timesheet_model_item{
+    background-color: #fefefe;
+    margin: auto;
+    width: 240px;
+    border : 1px solid #ddd;
+    border-radius: 10px;
+    padding:20px;
+    margin-top: 100px;
+}
+
+.close{
+    display: block;
+    position: relative;
+    top: -10px;
+    left: 190px;
+    cursor: pointer;
+}

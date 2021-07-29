@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Time Sheet</title>
+</head>
+<body>
+    <section>
+        <h1>Time Sheet Entry</h1>
+        <article class="timesheet_model_container">
+            <div class="timesheet_model_item">
+                <span id="spn_close" class="close">&times;</span>
+                <form>
+                    <div class="input-items">
+                        <input type="text" name="Employee ID" id="txt_empID" placeholder="Employee ID">
+                    </div>
+                    <div class="input-items">
+                        <input type="text" name="Employee Name" id="txt_empName" placeholder="Employee Name">
+                    </div>
+                    <div class="input-items">
+                        <label>Project</label>
+                        <select id="ddl_project">
+                            <option value="">Select</option>
+                            <option value="project_A">Project A</option>
+                            <option value="project_B">Project B</option>
+                            <option value="project_C">Project C</option>
+                        </select>
+                    </div>
+                    <div class="input-items">
+                        <input type="text" name="Task" id="txt_task" placeholder="Task">
+                    </div>
+                    <div class="input-items">
+                        <label>Start Time</label>
+                        <input type="datetime-local" name="Start Time" id="txt_startTime">
+                    </div>
+                    <div class="input-items">
+                        <label>End Time</label>
+                        <input type="datetime-local" name="End Time" id="txt_endTime">
+                    </div>
+                    <div class="input-items">
+                        <input type="text" name="Hours" id="txt_hour" placeholder="Total Hours">
+                    </div>
+                    <div class="input-items">
+                        <button id="btn_submit">Submit</button>
+                    </div>
+                </form>   
+            </div>
+        </article>
+
+        <article>
+            <div style="position: relative;">
+                <table id="tbl_timeSheet">
+                    <thead>
+                        <th>
+                            Employee ID
+                        </th>
+                        <th>
+                            Employee Name
+                        </th>
+                        <th>
+                            Task
+                        </th>
+                        <th>
+                            Project
+                        </th>
+                        <th>
+                            Start Time
+                        </th>
+                        <th>
+                            End Time
+                        </th>
+                        <th>
+                            Total Hours
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>emp5647457</td>
+                            <td>Mahesh</td>
+                            <td>Updating Timesheet</td>
+                            <td>Project A</td>
+                            <td>28-07-2021 10:00AM</td>
+                            <td>28-07-2021 11:55AM</td>
+                            <td>10</td>
+                            <td>
+                                <a href="#">Edit</a>
+                                <a href="#">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button class="btn_addClass" id="btn_add"></button>
+            </div>
+        </article>
+    </section>
+
+    <script src="./timesheet.js" type="text/javascript"></script>
+</body>
+</html>
