@@ -16,7 +16,7 @@
         <article class="timesheet_model_container">
             <div class="timesheet_model_item">
                 <span id="spn_close" class="close">&times;</span>
-                <form>
+                <form action="#" onsubmit="return false;" >
                     <div class="input-items">
                         <input type="text" name="Employee ID" id="txt_empID" placeholder="Employee ID">
                     </div>
@@ -47,7 +47,7 @@
                         <input type="text" name="Hours" id="txt_hour" placeholder="Total Hours">
                     </div>
                     <div class="input-items">
-                        <button id="btn_submit">Submit</button>
+                        <input type="submit" name="Hours" id="btn_submit">
                     </div>
                 </form>   
             </div>
@@ -82,7 +82,7 @@
                             Action
                         </th>
                     </thead>
-                    <tbody>
+                    <tbody id="tbl_timeSheet_data">
                         <tr>
                             <td>emp5647457</td>
                             <td>Mahesh</td>
